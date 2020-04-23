@@ -30,11 +30,11 @@ return (
         
         <p><label>Do you agree to the terms of service?</label><input onChange={updateFormChecked} type='checkbox' name='tosAgree' checked={values.tosAgree}></input></p>
         <p><button onClick={onSubmit} disabled={!buttonEnabled}>Submit</button></p>
-        <p className='red'>{formErrors.name}</p>
-        <p className='red'>{formErrors.email}</p>
-        <p className='red'>{formErrors.password}</p>
-        <p className='red'>{formErrors.role}</p>
-        <p className='red'>{formErrors.tosAgree}</p>
+        <p cytest= 'cyErrorName' className='red'>{formErrors.name}</p>
+        <p cytest= 'cyErrorEmail' className='red'>{formErrors.email}</p>
+        <p cytest= 'cyErrorPassword' className='red'>{formErrors.password}</p>
+        <p cytest= 'cyErrorRole' className='red'>{formErrors.role}</p>
+        <p cytest= 'cyErrorTosAgree' className='red'>{formErrors.tosAgree}</p>
 
     </div>
 

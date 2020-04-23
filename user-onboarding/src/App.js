@@ -20,9 +20,9 @@ const initialFormValues = {
 
 const initialFormErrors = {
 
-  name:'',
-  email:'',
-  password:'',
+  name:'Name must be at least 2 characters long!',
+  email:'Email required',
+  password:'Password must be at least 8 characters long!',
   role:'You must choose a role!',
   tosAgree:'You must agree to the terms of service!'
 
