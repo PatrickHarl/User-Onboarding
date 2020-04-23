@@ -13,6 +13,7 @@ const initialFormValues = {
   name:'',
   email:'',
   password:'',
+  role:'',
   tosAgree: false
 
 }
@@ -22,6 +23,7 @@ const initialFormErrors = {
   name:'',
   email:'',
   password:'',
+  role:'You must choose a role!',
   tosAgree:'You must agree to the terms of service!'
 
 }
@@ -40,6 +42,10 @@ const formSchema = yup.object().shape({
           .string()
           .min(8, 'Password must be at least 8 characters long!')
           .required('Password required'),
+          role: yup
+          .string()
+          .notOneOf(['choose'], 'You must choose a role!')
+          .required('You must choose a role!'),
         tosAgree: yup
           .bool().oneOf([true], 'You must agree to the terms of service!')
 
@@ -126,7 +132,7 @@ function App() {
 
         //console.log(res.data)
         setUsers([...users, res.data])
-        console.log(users)
+        //console.log(users)
 
       })
       .catch ((err) => {
